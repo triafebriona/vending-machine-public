@@ -1,0 +1,339 @@
+/* vending-machine-dashboard/public/css/style.css */
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 0.9rem;
+    background: transparent;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    padding: 1.5rem;
+    background: transparent;
+}
+
+:root {
+    --primary-purple: #2a1573;
+    --primary-purple-shadow: rgba(42, 21, 115, 0.45);
+}
+
+.dashboard-body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top right, rgba(170,140,255,0.45) 0%, transparent 45%),
+        radial-gradient(circle at bottom left, rgba(90,40,255,0.55) 0%, transparent 55%),
+        linear-gradient(
+            135deg,
+            #1f0b4d 0%,
+            #4b2ccf 40%,
+            #7f5af0 100%
+        );
+    background-attachment: fixed;
+}
+
+.dashboard-body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.04),
+        rgba(0,0,0,0.18)
+    );
+    pointer-events: none;
+}
+
+.dashboard-wrapper {
+    min-height: 100vh;
+    background: transparent;
+}
+
+.dashboard-content {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.dashboard-content h1,
+.dashboard-content h3 {
+    color: #ffffff;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.glass-filter {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 16px;
+}
+
+.btn-primary {
+    background: var(--primary-purple);
+    border: none;
+    box-shadow: 0 12px 28px var(--primary-purple-shadow);
+}
+
+.btn-primary:hover {
+    background: #3a1f9a;
+}
+
+.btn-outline-light {
+    border-color: rgba(255,255,255,0.5);
+    color: #ffffff;
+}
+
+.logout-btn {
+    background: var(--primary-purple);
+    box-shadow: 0 12px 28px var(--primary-purple-shadow);
+    color: #ffffff !important;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.sidebar {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: inset -1px 0 0 rgba(0,0,0,0.08);
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(95,44,255,0.08);
+    border-left-color: #5f2cff;
+    color: #5f2cff;
+}
+
+.sidebar .nav-link.active {
+    background-color: rgba(95,44,255,0.15);
+    border-left-color: #5f2cff;
+    color: #5f2cff;
+}
+
+.logout-btn {
+    background: #2a1573;
+    box-shadow: 0 12px 28px rgba(42, 21, 115, 0.45);
+
+    color: #ffffff !important;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.logout-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.table,
+.table thead,
+.table tbody,
+.table tr,
+.table td,
+.table th {
+    background-color: transparent !important;
+}
+
+.table-wrapper {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 12px;
+    overflow-x: auto;
+}
+
+.table-glass {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: transparent;
+    color: #ffffff;
+}
+
+.table-glass thead th {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f0b4d;
+    font-weight: 600;
+    border: none;
+    padding: 14px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-glass thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table-glass thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.table-glass tbody tr {
+    background: transparent;
+    transition: background 0.25s ease;
+}
+
+.table-glass tbody tr:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.table-glass tbody td {
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.table-glass a {
+    color: #ffd6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.table-glass a:hover {
+    text-decoration: underline;
+}
+
+.table-glass .badge {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+}
+
+.pagination .page-link {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #ffffff;
+}
+
+.pagination .page-item.active .page-link {
+    background: #ffffff;
+    color: #6a0dad;
+    font-weight: bold;
+}
+
+.pagination .page-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.glass-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.glass-box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 18px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 12px 28px rgba(42, 21, 115, 0.35);
+    transition: transform .2s ease;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.glass-box:hover {
+    transform: translateY(-4px);
+}
+
+.table-glass th,
+.table-glass td {
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.table-glass th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.table-glass .badge {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+}
+
+.stock-slot {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #cdb7ff;
+}
+
+.stock-product {
+    font-size: 0.95rem;
+    margin-top: 6px;
+}
+
+.stock-price {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.stock-qty {
+    margin-top: 10px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.stock-qty.normal {
+    background: rgba(72, 187, 120, 0.25);
+}
+
+.stock-qty.low {
+    background: #7f5af0;
+}
+
+.stock-empty {
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.alert {
+    border-radius: 14px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .dashboard-content {
+        padding: 16px;
+    }
+}
